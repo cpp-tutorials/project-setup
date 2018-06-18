@@ -8,17 +8,9 @@ addons:
             - ubuntu-toolchain-r-test
         packages:
             - g++-8
-        env:
-            - CC=gcc-8 
-            - CXX=g++-8"
-
-before_install:
-    - sudo apt-get purge cmake
-    - wget https://cmake.org/files/v3.11/cmake-3.11.4-Linux-x86_64.sh
-    - sudo sh cmake-3.11.4-Linux-x86_64.sh --prefix=/usr --skip-license 
 script:
-    - mkdir build
-    - cd build
-    - cmake ..
-    - make
-    - ctest
+    - export CC=/usr/bin/gcc-8
+    - export CXX=/usr/bin/g++-8
+    - wget https://cmake.org/files/v3.11/cmake-3.11.4-Linux-x86_64.sh
+    - sudo sh cmake-3.11.4-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    - cmake --version
