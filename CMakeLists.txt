@@ -4,6 +4,7 @@ include(CheckCXXCompilerFlag)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(GCC_STYLE_WARNINGS "-Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic")
 set(GCC_STYLE_OPTIMIZATIONS "-O3 -march=native -mtune=native")
 
