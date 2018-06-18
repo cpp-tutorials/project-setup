@@ -12,7 +12,8 @@ script:
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 1
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 1
     - wget https://cmake.org/files/v3.11/cmake-3.11.4-Linux-x86_64.sh
-    - sudo sh cmake-3.11.4-Linux-x86_64.sh --skip-license --prefix=/usr/local
-    - sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1
-    - sudo update-alternatives --install /usr/bin/ctest ctest /usr/local/bin/ctest 1
+    - sudo mkdir /usr/local/cmake-3.11.4
+    - sudo sh cmake-3.11.4-Linux-x86_64.sh --skip-license --prefix=/usr/local/cmake-3.11.4
+    - sudo update-alternatives --install /usr/local/cmake-3.9.2/bin/cmake cmake /usr/local/cmake-3.11.4/bin/cmake 1
+    - sudo update-alternatives --install /usr/local/cmake-3.9.2/bin/ctest ctest /usr/local/cmake-3.11.4/bin/ctest 1
     - g++ --version && cmake --version
