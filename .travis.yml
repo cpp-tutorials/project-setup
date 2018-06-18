@@ -11,9 +11,10 @@ addons:
 script:
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 1
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 1
-    - wget https://cmake.org/files/v3.11/cmake-3.11.4-Linux-x86_64.sh
-    - sudo mkdir /usr/local/cmake-3.11.4
-    - sudo sh cmake-3.11.4-Linux-x86_64.sh --skip-license --prefix=/usr/local/cmake-3.11.4
-    - sudo update-alternatives --install /usr/local/bin/cmake cmake /usr/local/cmake-3.11.4/bin/cmake 1
-    - sudo update-alternatives --install /usr/local/bin/ctest ctest /usr/local/cmake-3.11.4/bin/ctest 1
-    - g++ --version && cmake --version
+      #- wget https://cmake.org/files/v3.11/cmake-3.11.4-Linux-x86_64.sh
+      #- sudo mkdir /usr/local/cmake-3.11.4
+      #- sudo sh cmake-3.11.4-Linux-x86_64.sh --skip-license --prefix=/usr/local/cmake-3.11.4
+      #- sudo update-alternatives --install /usr/local/bin/cmake cmake /usr/local/cmake-3.11.4/bin/cmake 1
+      #- sudo update-alternatives --install /usr/local/bin/ctest ctest /usr/local/cmake-3.11.4/bin/ctest 1
+    - whereis cmake
+    - echo $PATH
