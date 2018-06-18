@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+include(GoogleTest)
+add_executable(tests t1.cpp t2.cpp)
+target_link_libraries(tests gtest gtest_main)
+gtest_discover_tests(tests)
